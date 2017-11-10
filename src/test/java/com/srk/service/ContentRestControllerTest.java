@@ -17,7 +17,7 @@ public class ContentRestControllerTest {
 
     @Test
     public void shouldGetContent() throws Exception {
-        String expectedResponse = "{\"id\":1,\"content\":\"Welcome to Rest World!\"}";
+        String expectedResponse = "{\"id\":1,\"content\":\"Welcome to Rest World!!! Local is en_US\"}";
 
         String actualResponse = restTemplate.getForObject("/getContent", String.class);
 
