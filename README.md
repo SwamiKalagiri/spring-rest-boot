@@ -1,5 +1,7 @@
 # spring-rest-boot
 
+[![Build Status](https://travis-ci.org/SwamiKalagiri/spring-rest-boot.svg?branch=master)](https://travis-ci.org/SwamiKalagiri/spring-rest-boot)
+
 ######Steps to run the application
 
 1. clone the repository.
