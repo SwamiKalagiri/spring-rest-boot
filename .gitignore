@@ -13,3 +13,6 @@ hs_err_pid*
 .idea/
 spring-rest-boot.iml
 target/
+.settings/
+.classpath
+.project
