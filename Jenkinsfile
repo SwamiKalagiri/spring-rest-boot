@@ -17,5 +17,5 @@ pipeline {
 }
 
 def setup_scripts() {
-    sh 'chmod u+x ./pipeline/resources/build.sh'
+    sh 'chmod u+x /pipeline/resources/build.sh'
 }
