@@ -4,18 +4,18 @@ pipeline {
         stage('build') {
          agent {
                 dockerfile {
-                  filename '.pipeline/docker/build.dockerfile'
+                  filename 'pipeline/docker/build.dockerfile'
                   label 'master'
                 }
               }
          steps {
                setup_scripts()
-               sh '/pipeline/resources/verify.sh'
+               sh './pipeline/resources/verify.sh'
             }
         }
     }
 }
 
 def setup_scripts() {
-    sh 'chmod u+x /pipeline/resources/build.sh'
+    sh 'chmod u+x ./pipeline/resources/build.sh'
 }
