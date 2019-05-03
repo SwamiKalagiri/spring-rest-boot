@@ -10,13 +10,13 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                task('Deploy to UAT') {
+                step('Deploy to UAT') {
                     echo 'Deploying to UAT...'
                     sleep 4
                     echo 'Successfully deployed to UAT'
                 }
 
-                task('Deploy to production') {
+                step('Deploy to production') {
                     echo 'Deploying to production...'
                     sleep 4
                     echo 'Deployed to production!'
