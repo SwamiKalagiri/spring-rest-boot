@@ -5,7 +5,7 @@ pipeline {
          agent {
                 dockerfile {
                   filename '.pipeline/docker/build.dockerfile'
-                  label 'build'
+                  label 'master'
                 }
               }
          steps {
