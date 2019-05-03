@@ -1,12 +1,21 @@
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
+    agent none
     stages {
         stage('build') {
-            steps {
-                sh 'mvn --version'
-                sh 'mvn -Dmaven.test.failure.ignore clean package'
-                step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+         agent {
+                dockerfile {
+                  filename '.pipeline/docker/build.dockerfile'
+                  label 'build'
+                }
+              }
+         steps {
+               setup_scripts()
+               sh './pipeline/resources/verify.sh'
             }
         }
+    }
+
+    def setup_scripts() {
+      sh 'chmod u+x ./pipeline/resources/build.sh'
     }
 }
