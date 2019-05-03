@@ -10,7 +10,7 @@ pipeline {
               }
          steps {
                setup_scripts()
-               sh './pipeline/resources/verify.sh'
+               sh './pipeline/resources/build.sh'
             }
         }
     }
