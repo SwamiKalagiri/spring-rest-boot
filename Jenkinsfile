@@ -8,20 +8,19 @@ pipeline {
                 step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
             }
         }
-        stage('Deploy') {
+        stage('Deploy UAT') {
             steps {
-                step('Deploy to UAT') {
                     echo 'Deploying to UAT...'
                     sleep 4
                     echo 'Successfully deployed to UAT'
                 }
-
-                step('Deploy to production') {
+        }
+        stage('Deploy PROD'){
+                steps('Deploy to production') {
                     echo 'Deploying to production...'
                     sleep 4
                     echo 'Deployed to production!'
                 }
             }
-        }
     }
 }
