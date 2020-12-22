@@ -1,6 +1,6 @@
 # spring-rest-boot
 
-[![Build Status](https://travis-ci.org/SwamiKalagiri/spring-rest-boot.svg?branch=master)](https://travis-ci.org/SwamiKalagiri/spring-rest-boot)
+[![Build Status](https://cloud.drone.io/api/badges/SwamiKalagiri/spring-rest-boot/status.svg)](https://cloud.drone.io/SwamiKalagiri/spring-rest-boot)
 
 ######Steps to run the application
 
